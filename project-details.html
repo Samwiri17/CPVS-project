@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Project Details - CPVS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+        /* ===== PROJECT DETAIL PAGE ===== */
+.ftco-project-detail { background: #f8f9fa; padding: 60px 0 !important; }
+.back-link { color: #1a3a2a; font-weight: 700; font-size: 14px; }
+.back-link:hover { color: #5b8dbf; text-decoration: none; }
+.detail-card { background: #fff; border-radius: 22px; overflow: hidden; box-shadow: 0 8px 30px rgba(0,0,0,0.07); margin-bottom: 30px; }
+.detail-image { background: #f0f3e8; height: 360px; display: flex; align-items: center; justify-content: center; position: relative; overflow: hidden; }
+.detail-image img { width: 100%; height: 100%; object-fit: cover; position: absolute; top:0; left:0; }
+.detail-body { padding: 28px 30px 30px; }
+.detail-body h2 { font-size: 26px; font-weight: 700; color: #1a3a2a; line-height: 1.35; margin-bottom: 16px; }
+.detail-body h4 { font-size: 18px; font-weight: 700; color: #1a3a2a; margin-top: 28px; margin-bottom: 12px; }
+.detail-body p { color: #555; font-size: 15px; line-height: 1.7; }
+.detail-list { list-style: none; padding: 0; margin: 0; }
+.detail-list li { padding: 6px 0; color: #444; font-size: 15px; }
+.detail-list li i { color: #7fb069; margin-right: 8px; font-size: 12px; }
+.detail-share { margin-top: 30px; padding-top: 20px; border-top: 1px solid #eee; display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+.detail-share span { font-weight: 700; font-size: 14px; margin-right: 5px; }
+.share-btn { padding: 7px 14px; border-radius: 20px; font-size: 13px; font-weight: 600; color: #fff !important; text-decoration: none !important; }
+.share-wa { background: #25D366; } .share-fb { background: #1877F2; } .share-link { background: #333; }
+.sidebar-card { background: #fff; border-radius: 18px; padding: 24px; box-shadow: 0 8px 30px rgba(0,0,0,0.07); margin-bottom: 25px; }
+.sidebar-card h4 { font-size: 16px; font-weight: 700; color: #1a3a2a; margin-bottom: 16px; }
+.sidebar-card h4 i { color: #5b8dbf; margin-right: 6px; }
+.sponsor-card { border-top: 4px solid #5b8dbf; text-align: center; }
+.sponsor-logo-wrap { background: #f8f9fa; border-radius: 12px; padding: 18px; min-height: 100px; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; position: relative; }
+.sponsor-logo-wrap img { max-width: 170px; max-height: 80px; object-fit: contain; position: relative; z-index: 2; }
+.sponsor-initial { position: absolute; font-size: 36px; font-weight: 800; color: #5b8dbf; }
+.sponsor-card h3 { font-size: 20px; font-weight: 700; color: #1a3a2a; margin-bottom: 4px; }
+.sponsor-type { font-size: 12px; color: #5b8dbf; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px; }
+.sponsor-card p { font-size: 14px; color: #666; line-height: 1.6; }
+.sponsor-meta { background: #f8f9fa; border-radius: 10px; padding: 12px 14px; text-align: left; margin: 14px 0; }
+.sponsor-meta p { margin: 4px 0; font-size: 13px; }
+.facts-list { list-style: none; padding: 0; margin: 0; }
+.facts-list li { display: flex; justify-content: space-between; gap: 10px; padding: 9px 0; border-bottom: 1px solid #f0f0f0; font-size: 14px; }
+.facts-list li span { color: #888; }
+.facts-list li strong { text-align: right; color: #222; }
+.sidebar-cta { background: #5b8dbf; color: #fff; text-align: center; }
+.sidebar-cta h3, .sidebar-cta p { color: #fff; }
+.sidebar-cta i { font-size: 32px; color: #22550b; margin-bottom: 10px; }
+.related-item { display: block; padding: 12px 0; border-bottom: 1px solid #f0f0f0; text-decoration: none !important; }
+.related-item:last-child { border: none; }
+.related-cat { display: block; font-size: 10px; font-weight: 800; letter-spacing: 1px; color: #8a6d1a; background: #fdf3d8; padding: 3px 8px; border-radius: 10px; width: fit-content; margin-bottom: 6px; }
+.related-item strong { display: block; font-size: 14px; color: #1a3a2a; line-height: 1.4; margin-bottom: 4px; }
+.related-item small { color: #888; font-size: 12px; }
+@media (max-width: 767px){ .detail-image{ height: 220px; } .detail-body{ padding: 20px; } .detail-body h2{ font-size: 21px; } }
+
+/* Project Detail Image - Always Visible */
+.detail-image {
+  background: #f0f3e8;
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+.detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block !important;
+}
+@media (max-width: 767px) {
+  .detail-image { height: 220px; }
+}
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+   <div class="container">
+    <div class="row">
+     <div class="col-md-6 d-flex align-items-center">
+      <p class="mb-0 phone pl-md-2">
+       <a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +211 913110810</a> 
+       <a href="#"><span class="fa fa-paper-plane mr-1"></span> info@cpvs-ss.org</a>
+     </p>
+   </div>
+   <div class="col-md-6 d-flex justify-content-md-end">
+    <div class="social-media">
+     <p class="mb-0 d-flex">
+      <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+      <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-whatsapp"><i class="sr-only">Whatsapp</i></span></a>
+      <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+    </p>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+ <div class="container">
+   <a class="navbar-brand" href="index.html">CPVS</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="oi oi-menu"></span> Menu
+   </button>
+   <div class="collapse navbar-collapse" id="ftco-nav">
+     <ul class="navbar-nav ml-auto">
+       <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+       <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+       <li class="nav-item"><a href="volunteer.html" class="nav-link">Partners</a></li>
+       <li class="nav-item"><a href="causes.html" class="nav-link">Causes</a></li>
+       <li class="nav-item active"><a href="projects.html" class="nav-link">Projects</a></li>
+       <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+       <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+       <li class="nav-item cta"><a href="contact.html" class="nav-link">Donate</a></li>
+     </ul>
+   </div>
+ </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text align-items-end">
+      <div class="col-md-9 ftco-animate pb-5">
+       <h1 class="mb-0 bread" id="heroCategory">Project Details</h1>
+     </div>
+   </div>
+ </div>
+</section>
+
+<!-- DETAIL CONTENT - FILLED BY JS -->
+<section class="ftco-section ftco-project-detail">
+ <div class="container">
+
+  <div class="row">
+    <!-- LEFT - MAIN -->
+    <div class="col-lg-8">
+      <div class="detail-card">
+        <div class="detail-image" id="detailImageWrap">
+          <!-- CHANGED: now always shows images/sample.jpg -->
+          <img id="detailImage" src="images/about-3.jpg" alt="Project Image">
+        </div>
+        <div class="detail-body">
+          <div class="project-top">
+            <span class="project-category" id="detailCategory">PEACEBUILDING AND SOCIAL COHESION</span>
+            <span class="project-status status-completed" id="detailStatus">Completed</span>
+          </div>
+          <h2 id="detailTitle">Project Title</h2>
+
+          <h4>About This Project</h4>
+          <p id="detailOverview"></p>
+
+          <h4>Objectives</h4>
+          <ul class="detail-list" id="detailObjectives"></ul>
+
+          <h4>Key Activities</h4>
+          <ul class="detail-list" id="detailActivities"></ul>
+
+          <h4>Results & Impact</h4>
+          <p id="detailResults"></p>
+
+          <div class="detail-share">
+            <span>Share this project:</span>
+            <a href="#" onclick="shareWhatsApp(); return false;" class="share-btn share-wa"><i class="fa fa-whatsapp"></i> WhatsApp</a>
+            <a href="#" onclick="shareFacebook(); return false;" class="share-btn share-fb"><i class="fa fa-facebook"></i> Facebook</a>
+            <a href="#" onclick="copyLink(); return false;" class="share-btn share-link"><i class="fa fa-link"></i> Copy Link</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT - SIDEBAR -->
+    <div class="col-lg-4">
+      <!-- PARTNER SPONSORING -->
+      <div class="sidebar-card sponsor-card">
+        <h4><i class="fa fa-handshake-o"></i> Partner Sponsoring</h4>
+        <div class="sponsor-logo-wrap">
+          <img id="sponsorLogo" src="" alt="Partner Logo" onerror="this.style.display='none'">
+          <div class="sponsor-initial" id="sponsorInitial">U</div>
+        </div>
+        <h3 id="sponsorName">UNICEF</h3>
+        <p class="sponsor-type" id="sponsorType">UN Agency • Funding & Technical Partner</p>
+        <p id="sponsorRole"></p>
+        <div class="sponsor-meta">
+          <p><strong>Funded Amount:</strong> <span id="sponsorAmount"></span></p>
+          <p><strong>Partnership Since:</strong> <span id="sponsorSince"></span></p>
+        </div>
+        <a id="sponsorWebsite" href="#" target="_blank" class="btn btn-primary btn-block py-2">Visit Partner Website <i class="fa fa-arrow-right"></i></a>
+        <a href="volunteer.html" class="btn btn-outline-dark btn-block py-2 mt-2">View All Partners</a>
+      </div>
+
+      <!-- PROJECT FACTS -->
+      <div class="sidebar-card">
+        <h4><i class="fa fa-info-circle"></i> Project Facts</h4>
+        <ul class="facts-list">
+          <li><span>Location:</span> <strong id="factLocation"></strong></li>
+          <li><span>Duration:</span> <strong id="factDates"></strong></li>
+          <li><span>Status:</span> <strong id="factStatus"></strong></li>
+          <li><span>Program Area:</span> <strong id="factProgram"></strong></li>
+          <li><span>Beneficiaries:</span> <strong id="factBeneficiaries"></strong></li>
+          <li><span>Implementer:</span> <strong>CPVS South Sudan</strong></li>
+        </ul>
+      </div>
+
+      <!-- CTA -->
+      <div class="sidebar-card sidebar-cta">
+        <i class="fa fa-heart"></i>
+        <h3>Support This Project</h3>
+        <p>Your donation helps CPVS reach more children and families in need.</p>
+        <a href="contact.html" class="btn btn-primary btn-block py-3">Donate Now</a>
+        <a href="contact.html" class="btn btn-outline-light btn-block py-2 mt-2">Become a Partner</a>
+      </div>
+
+    </div>
+  </div>
+
+ </div>
+</section>
+<section class="ftco-hireme bg-secondary">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-md-8 col-lg-8 d-flex align-items-center">
+                <div class="w-100">
+                    <h2>Best Way to Make a Difference in the Lives of Others</h2>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 d-flex align-items-center justify-content-end">
+                <p class="mb-0"><a href="volunteer.html" class="btn btn-primary py-3 px-4">Become A Volunteer</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+ <div class="container">
+  <div class="row">
+   <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+    <h2 class="footer-heading">CPVS</h2>
+    <p>Non-Government Organisation dedicated to child protection, vulnerable community support, humanitarian response and sustainable development.</p>
+    <ul class="ftco-footer-social p-0">
+      <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Whatsapp"><span class="fa fa-whatsapp"></span></a></li>
+      <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="fa fa-facebook"></span></a></li>
+      <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="fa fa-instagram"></span></a></li>
+    </ul>
+    <p><a href="#" class="btn btn-quarternary">Donate Now</a></p>
+  </div>
+  <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+    <h2 class="footer-heading">Latest News</h2>
+    <div class="block-21 mb-4 d-flex">
+      <a class="img mr-4 rounded" style="background-image: url(images/image_1.jpg);"></a>
+      <div class="text"><h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3><div class="meta"><div><a href="#">Jul 20, 2020</a></div><div><a href="#">Admin</a></div></div></div>
+    </div>
+    <div class="block-21 mb-4 d-flex">
+      <a class="img mr-4 rounded" style="background-image: url(images/image_2.jpg);"></a>
+      <div class="text"><h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3><div class="meta"><div><a href="#">Jul 20, 2020</a></div><div><a href="#">Admin</a></div></div></div>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-3 pl-lg-5 mb-4 mb-md-0">
+    <h2 class="footer-heading">Quick Links</h2>
+    <ul class="list-unstyled">
+      <li><a href="index.html" class="py-2 d-block">Home</a></li>
+      <li><a href="about.html" class="py-2 d-block">About</a></li>
+      <li><a href="causes.html" class="py-2 d-block">Causes</a></li>
+      <li><a href="volunteer.html" class="py-2 d-block">Partners</a></li>
+      <li><a href="projects.html" class="py-2 d-block">Projects</a></li>
+      <li><a href="blog.html" class="py-2 d-block">Blog</a></li>
+      <li><a href="contact.html" class="py-2 d-block">Contact</a></li>
+    </ul>
+  </div>
+  <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+    <h2 class="footer-heading">Have a Questions?</h2>
+    <div class="block-23 mb-3">
+      <ul>
+        <li><span class="icon fa fa-map"></span><span class="text">Hai Nem, Juba, Central Equatoria State, Republic of South Sudan</span></li>
+        <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+211 913110810</span></a></li>
+        <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">info@cpvs-ss.org</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row mt-5"><div class="col-md-12 text-center"><p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <i class="fa fa-heart" aria-hidden="true"></i> <a href="https://cpvs-ss.org" target="_blank">cpvs-ss</a></p></div></div>
+</div>
+</footer>
+
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="js/main.js"></script>
+
+
+</body>
+</html>

@@ -1,0 +1,614 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Projects - CPVS</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  
+  <link href="https://fonts.googleapis.com/css?family=Montserrat:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  
+  <link rel="stylesheet" href="css/animate.css">
+  <link rel="stylesheet" href="css/owl.carousel.min.css">
+  <link rel="stylesheet" href="css/owl.theme.default.min.css">
+  <link rel="stylesheet" href="css/magnific-popup.css">
+  <link rel="stylesheet" href="css/bootstrap-datepicker.css">
+  <link rel="stylesheet" href="css/jquery.timepicker.css">
+  <link rel="stylesheet" href="css/flaticon.css">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    /* ===== CPVS PROJECTS PAGE - SAME AS IMAGE ===== */
+.ftco-projects-page {
+  background: #f8f9fa;
+  padding: 80px 0 !important;
+}
+.ftco-projects-page .col-md-6,
+.ftco-projects-page .col-lg-4 {
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 30px;
+  margin-bottom: 15px;
+}
+.project-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+.filter-btn {
+  background: #fff;
+  border: 1px solid #e0e0e0;
+  color: #333;
+  padding: 8px 18px;
+  border-radius: 25px;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.filter-btn:hover, .filter-btn.active {
+  background: #1a3a2a;
+  color: #fff;
+  border-color: #1a3a2a;
+}
+.project-card-link {
+  text-decoration: none !important;
+  display: block;
+  height: 100%;
+}
+.project-card-link:hover {
+  text-decoration: none;
+}
+.project-card {
+  background: #fff;
+  border-radius: 22px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.07);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: all 0.3s ease;
+  border: 1px solid #eef1f3;
+}
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.12);
+}
+.project-image {
+  background: #f0f3e8;
+  height: 220px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+.project-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 2;
+}
+.project-image.no-image {
+  background: #f0f3e8;
+}
+.no-image-text {
+  color: #a8b89a;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  z-index: 1;
+}
+.project-body {
+  padding: 22px 24px 24px;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+}
+.project-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 10px;
+  margin-bottom: 14px;
+}
+.project-category {
+  background: #fdf3d8;
+  color: #8a6d1a;
+  font-size: 10px;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  padding: 7px 12px;
+  border-radius: 20px;
+  line-height: 1.4;
+  display: inline-block;
+}
+.project-status {
+  font-size: 12px;
+  font-weight: 700;
+  padding: 5px 12px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+.status-completed { background: #eef4ff; color: #2a5ad7; }
+.status-ongoing { background: #e6f7ee; color: #1a8a4a; }
+.status-upcoming { background: #fff3e0; color: #e67e22; }
+.project-body h3 {
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a3a2a;
+  line-height: 1.35;
+  margin-bottom: 18px;
+  font-family: 'Montserrat', sans-serif;
+}
+.project-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  color: #8a9ba8;
+  font-size: 13px;
+  margin-bottom: 18px;
+  margin-top: auto;
+}
+.project-meta i {
+  margin-right: 6px;
+  color: #8a9ba8;
+}
+.project-view {
+  color: #1a5a2e;
+  font-weight: 700;
+  font-size: 15px;
+}
+.project-view i {
+  font-size: 12px;
+  margin-left: 4px;
+  transition: transform 0.3s;
+}
+.project-card:hover .project-view i {
+  transform: translateX(4px);
+}
+@media (max-width: 767px) {
+  .project-image { height: 180px; }
+  .project-body h3 { font-size: 18px; }
+}
+  </style>
+</head>
+<body>
+
+  <div class="wrap">
+   <div class="container">
+    <div class="row">
+     <div class="col-md-6 d-flex align-items-center">
+      <p class="mb-0 phone pl-md-2">
+       <a href="#" class="mr-2"><span class="fa fa-phone mr-1"></span> +211 913110810</a> 
+       <a href="#"><span class="fa fa-paper-plane mr-1"></span> info@cpvs-ss.org</a>
+     </p>
+   </div>
+   <div class="col-md-6 d-flex justify-content-md-end">
+    <div class="social-media">
+     <p class="mb-0 d-flex">
+      <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-facebook"><i class="sr-only">Facebook</i></span></a>
+      <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-whatsapp"><i class="sr-only">Whatsapp</i></span></a>
+      <a href="#" class="d-flex align-items-center justify-content-center"><span class="fa fa-instagram"><i class="sr-only">Instagram</i></span></a>
+    </p>
+  </div>
+</div>
+</div>
+</div>
+</div>
+
+<nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+ <div class="container">
+   <a class="navbar-brand" href="index.html">CPVS</a>
+   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+     <span class="oi oi-menu"></span> Menu
+   </button>
+   <div class="collapse navbar-collapse" id="ftco-nav">
+     <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li>
+        <li class="nav-item"><a href="programmes.html" class="nav-link">Programmes</a></li>
+        <li class="nav-item active"><a href="projects.html" class="nav-link">Projects</a></li>
+        <li class="nav-item"><a href="causes.html" class="nav-link">Causes</a></li>
+        <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+        <li class="nav-item"><a href="volunteer.html" class="nav-link">Team</a></li>
+        <li class="nav-item"><a href="partners.html" class="nav-link">Partners</a></li>
+        <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+        <li class="nav-item cta"><a href="contact.html" class="nav-link">Donate</a></li>
+     </ul>
+   </div>
+ </div>
+</nav>
+<!-- END nav -->
+
+<section class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_2.jpg');" data-stellar-background-ratio="0.5">
+  <div class="overlay"></div>
+  <div class="container">
+    <div class="row no-gutters slider-text align-items-end">
+      <div class="col-md-9 ftco-animate pb-5">
+       <h1 class="mb-0 bread">Our Projects</h1>
+     </div>
+   </div>
+ </div>
+</section>
+
+<!-- ===== PROJECTS LIST ===== -->
+<section class="ftco-section ftco-projects-page">
+ <div class="container">
+
+  <div class="row justify-content-center pb-4 mb-3">
+    <div class="col-md-7 heading-section text-center ftco-animate">
+     <span class="subheading">What We Have Done</span>
+     <h2>All Projects</h2>
+     <p>Explore CPVS projects across South Sudan — child protection, education, health, WASH, livelihoods and emergency response.</p>
+   </div>
+  </div>
+
+  <!-- FILTER BUTTONS -->
+  <div class="row justify-content-center mb-5">
+    <div class="col-md-12 text-center project-filters">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="peacebuilding">Peacebuilding</button>
+      <button class="filter-btn" data-filter="child-protection">Child Protection</button>
+      <button class="filter-btn" data-filter="education">Education</button>
+      <button class="filter-btn" data-filter="health">Health</button>
+      <button class="filter-btn" data-filter="wash">WASH</button>
+      <button class="filter-btn" data-filter="livelihood">Livelihood</button>
+      <button class="filter-btn" data-filter="emergency">Emergency</button>
+    </div>
+  </div>
+
+  <div class="row" id="projectsGrid">
+
+    <!-- PROJECT 1 - YOUR IMAGE EXAMPLE -->
+    <div class="col-md-6 col-lg-4 project-item-card" data-category="peacebuilding">
+      <a href="project-details.html" class="project-card-link">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/projects/magwi.jpg" alt="Magwi Project" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
+            <span class="no-image-text">NO IMAGE</span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-category">PEACEBUILDING AND SOCIAL COHESION</span>
+              <span class="project-status status-completed">Completed</span>
+            </div>
+            <h3>Emergency and Recovery Support to Conflict-Affected Communities, IDPs, and Returnees in Magwi County</h3>
+            <div class="project-meta">
+              <span><i class="fa fa-map-marker"></i> Magwi county</span>
+              <span><i class="fa fa-calendar"></i> Mar 2025 – Mar 2026</span>
+            </div>
+            <span class="project-view">View project <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- PROJECT 2 -->
+    <div class="col-md-6 col-lg-4 project-item-card" data-category="child-protection">
+      <a href="project-detail.html?id=child-protection-juba" class="project-card-link">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/projects/juba-child.jpg" alt="Child Protection Juba" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
+            <span class="no-image-text">NO IMAGE</span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-category">CHILD PROTECTION</span>
+              <span class="project-status status-ongoing">Ongoing</span>
+            </div>
+            <h3>Child Protection and Psychosocial Support for Vulnerable Children in Juba</h3>
+            <div class="project-meta">
+              <span><i class="fa fa-map-marker"></i> Juba, Hai Nem</span>
+              <span><i class="fa fa-calendar"></i> Jan 2025 – Dec 2026</span>
+            </div>
+            <span class="project-view">View project <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- PROJECT 3 -->
+    <div class="col-md-6 col-lg-4 project-item-card" data-category="education">
+      <a href="project-detail.html?id=education-magwi" class="project-card-link">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/projects/education.jpg" alt="Education Project" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
+            <span class="no-image-text">NO IMAGE</span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-category">EDUCATION</span>
+              <span class="project-status status-ongoing">Ongoing</span>
+            </div>
+            <h3>Back to School: Education Support and Learning Materials for Children in Magwi</h3>
+            <div class="project-meta">
+              <span><i class="fa fa-map-marker"></i> Magwi county</span>
+              <span><i class="fa fa-calendar"></i> Feb 2025 – Feb 2026</span>
+            </div>
+            <span class="project-view">View project <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- PROJECT 4 -->
+    <div class="col-md-6 col-lg-4 project-item-card" data-category="health">
+      <a href="project-detail.html?id=health-nutrition" class="project-card-link">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/projects/health.jpg" alt="Health Project" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
+            <span class="no-image-text">NO IMAGE</span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-category">HEALTH AND NUTRITION</span>
+              <span class="project-status status-completed">Completed</span>
+            </div>
+            <h3>Community Health and Nutrition Screening for Mothers and Children in Central Equatoria</h3>
+            <div class="project-meta">
+              <span><i class="fa fa-map-marker"></i> Central Equatoria</span>
+              <span><i class="fa fa-calendar"></i> Jun 2024 – Jun 2025</span>
+            </div>
+            <span class="project-view">View project <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- PROJECT 5 -->
+    <div class="col-md-6 col-lg-4 project-item-card" data-category="wash">
+      <a href="project-detail.html?id=wash-juba" class="project-card-link">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/projects/wash.jpg" alt="WASH Project" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
+            <span class="no-image-text">NO IMAGE</span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-category">WASH</span>
+              <span class="project-status status-ongoing">Ongoing</span>
+            </div>
+            <h3>Clean Water Access and Hygiene Promotion in Displacement Sites in Juba</h3>
+            <div class="project-meta">
+              <span><i class="fa fa-map-marker"></i> Juba</span>
+              <span><i class="fa fa-calendar"></i> Apr 2025 – Apr 2026</span>
+            </div>
+            <span class="project-view">View project <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- PROJECT 6 -->
+    <div class="col-md-6 col-lg-4 project-item-card" data-category="livelihood">
+      <a href="project-detail.html?id=livelihood-youth" class="project-card-link">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/projects/livelihood.jpg" alt="Livelihood Project" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
+            <span class="no-image-text">NO IMAGE</span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-category">LIVELIHOOD & ECONOMIC RECOVERY</span>
+              <span class="project-status status-upcoming">Upcoming</span>
+            </div>
+            <h3>Youth Skills Training and Village Savings and Loans (VSLA) for Women in Juba</h3>
+            <div class="project-meta">
+              <span><i class="fa fa-map-marker"></i> Juba, Hai Nem</span>
+              <span><i class="fa fa-calendar"></i> Jan 2026 – Dec 2026</span>
+            </div>
+            <span class="project-view">View project <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- PROJECT 7 -->
+    <div class="col-md-6 col-lg-4 project-item-card" data-category="emergency">
+      <a href="project-detail.html?id=emergency-food" class="project-card-link">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/projects/emergency.jpg" alt="Emergency Project" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
+            <span class="no-image-text">NO IMAGE</span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-category">EMERGENCY RESPONSE</span>
+              <span class="project-status status-completed">Completed</span>
+            </div>
+            <h3>Emergency Food Assistance and NFI Distribution to Flood-Affected Families</h3>
+            <div class="project-meta">
+              <span><i class="fa fa-map-marker"></i> Bentiu & Juba</span>
+              <span><i class="fa fa-calendar"></i> Aug 2024 – Nov 2024</span>
+            </div>
+            <span class="project-view">View project <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- PROJECT 8 -->
+    <div class="col-md-6 col-lg-4 project-item-card" data-category="peacebuilding">
+      <a href="project-detail.html?id=gbv-prevention" class="project-card-link">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/projects/gbv.jpg" alt="GBV Project" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
+            <span class="no-image-text">NO IMAGE</span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-category">GENDER AND PROTECTION</span>
+              <span class="project-status status-ongoing">Ongoing</span>
+            </div>
+            <h3>GBV Prevention, Women Empowerment and Community Sensitization in Juba</h3>
+            <div class="project-meta">
+              <span><i class="fa fa-map-marker"></i> Juba</span>
+              <span><i class="fa fa-calendar"></i> Mar 2025 – Mar 2026</span>
+            </div>
+            <span class="project-view">View project <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+    <!-- PROJECT 9 -->
+    <div class="col-md-6 col-lg-4 project-item-card" data-category="child-protection">
+      <a href="project-detail.html?id=family-reunification" class="project-card-link">
+        <div class="project-card">
+          <div class="project-image">
+            <img src="images/projects/family.jpg" alt="Family Reunification" onerror="this.style.display='none'; this.parentElement.classList.add('no-image')">
+            <span class="no-image-text">NO IMAGE</span>
+          </div>
+          <div class="project-body">
+            <div class="project-top">
+              <span class="project-category">CHILD PROTECTION</span>
+              <span class="project-status status-ongoing">Ongoing</span>
+            </div>
+            <h3>Family Tracing, Reunification and Case Management for Separated Children</h3>
+            <div class="project-meta">
+              <span><i class="fa fa-map-marker"></i> Magwi & Juba</span>
+              <span><i class="fa fa-calendar"></i> Jan 2025 – Dec 2025</span>
+            </div>
+            <span class="project-view">View project <i class="fa fa-arrow-right"></i></span>
+          </div>
+        </div>
+      </a>
+    </div>
+
+  </div>
+
+  <div class="row mt-4">
+    <div class="col-md-12 text-center">
+      <p class="mb-0"><a href="contact.html" class="btn btn-primary py-3 px-4">Partner With Us On A Project</a></p>
+    </div>
+  </div>
+
+ </div>
+</section>
+<section class="ftco-hireme bg-secondary">
+    <div class="container">
+        <div class="row justify-content-between">
+            <div class="col-md-8 col-lg-8 d-flex align-items-center">
+                <div class="w-100">
+                    <h2>Best Way to Make a Difference in the Lives of Others</h2>
+                </div>
+            </div>
+            <div class="col-md-4 col-lg-4 d-flex align-items-center justify-content-end">
+                <p class="mb-0"><a href="volunteer.html" class="btn btn-primary py-3 px-4">Become A Volunteer</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<footer class="footer">
+ <div class="container">
+  <div class="row">
+   <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+    <h2 class="footer-heading">CPVS</h2>
+    <p>Non-Government Organisation dedicated to child protection, vulnerable community support, humanitarian response and sustainable development.</p>
+    <ul class="ftco-footer-social p-0">
+      <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Whatsapp"><span class="fa fa-whatsapp"></span></a></li>
+      <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Facebook"><span class="fa fa-facebook"></span></a></li>
+      <li class="ftco-animate"><a href="#" data-toggle="tooltip" data-placement="top" title="Instagram"><span class="fa fa-instagram"></span></a></li>
+    </ul>
+    <p><a href="#" class="btn btn-quarternary">Donate Now</a></p>
+  </div>
+  <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+    <h2 class="footer-heading">Latest News</h2>
+    <div class="block-21 mb-4 d-flex">
+      <a class="img mr-4 rounded" style="background-image: url(images/image_1.jpg);"></a>
+      <div class="text">
+        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+        <div class="meta">
+          <div><a href="#">Jul 20, 2020</a></div>
+          <div><a href="#">Admin</a></div>
+        </div>
+      </div>
+    </div>
+    <div class="block-21 mb-4 d-flex">
+      <a class="img mr-4 rounded" style="background-image: url(images/image_2.jpg);"></a>
+      <div class="text">
+        <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about</a></h3>
+        <div class="meta">
+          <div><a href="#">Jul 20, 2020</a></div>
+          <div><a href="#">Admin</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-6 col-lg-3 pl-lg-5 mb-4 mb-md-0">
+    <h2 class="footer-heading">Quick Links</h2>
+    <ul class="list-unstyled">
+      <li><a href="index.html" class="py-2 d-block">Home</a></li>
+      <li><a href="about.html" class="py-2 d-block">About</a></li>
+      <li><a href="causes.html" class="py-2 d-block">Causes</a></li>
+      <li><a href="volunteer.html" class="py-2 d-block">Partners</a></li>
+      <li><a href="projects.html" class="py-2 d-block">Projects</a></li>
+      <li><a href="blog.html" class="py-2 d-block">Blog</a></li>
+      <li><a href="contact.html" class="py-2 d-block">Contact</a></li>
+    </ul>
+  </div>
+  <div class="col-md-6 col-lg-3 mb-4 mb-md-0">
+    <h2 class="footer-heading">Have a Questions?</h2>
+    <div class="block-23 mb-3">
+      <ul>
+        <li><span class="icon fa fa-map"></span><span class="text">Hai Nem, Juba, Central Equatoria State, Republic of South Sudan</span></li>
+        <li><a href="#"><span class="icon fa fa-phone"></span><span class="text">+211 913110810</span></a></li>
+        <li><a href="#"><span class="icon fa fa-paper-plane"></span><span class="text">info@cpvs-ss.org</span></a></li>
+      </ul>
+    </div>
+  </div>
+</div>
+<div class="row mt-5">
+  <div class="col-md-12 text-center">
+    <p class="copyright">Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | <i class="fa fa-heart" aria-hidden="true"></i> <a href="https://cpvs-ss.org" target="_blank">cpvs-ss</a></p>
+    </div>
+  </div>
+</div>
+</footer>
+
+<div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery-migrate-3.0.1.min.js"></script>
+<script src="js/popper.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.easing.1.3.js"></script>
+<script src="js/jquery.waypoints.min.js"></script>
+<script src="js/jquery.stellar.min.js"></script>
+<script src="js/jquery.animateNumber.min.js"></script>
+<script src="js/bootstrap-datepicker.js"></script>
+<script src="js/jquery.timepicker.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/jquery.magnific-popup.min.js"></script>
+<script src="js/scrollax.min.js"></script>
+<script src="js/main.js"></script>
+
+<script>
+// Simple Filter - No jQuery needed
+document.querySelectorAll('.filter-btn').forEach(btn => {
+  btn.addEventListener('click', function(){
+    document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+    this.classList.add('active');
+    var filter = this.getAttribute('data-filter');
+    document.querySelectorAll('.project-item-card').forEach(card => {
+      if(filter === 'all' || card.getAttribute('data-category') === filter){
+        card.style.display = 'block';
+      } else {
+        card.style.display = 'none';
+      }
+    });
+  });
+});
+</script>
+
+</body>
+</html>
